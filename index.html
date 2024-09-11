@@ -1,20 +1,77 @@
 <html>
     <head>
         <title>WSJ and KXZ 的小屋</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                color: #333;
+                text-align: center;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+                color: #ff6347;
+                margin-bottom: 20px;
+            }
+
+            audio {
+                margin-top: 20px;
+                width: 300px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            img {
+                margin-top: 20px;
+                max-width: 500px;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #ff6347;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1em;
+            }
+
+            button:hover {
+                background-color: #ff4500;
+            }
+
+            .container {
+                display: inline-block;
+                text-align: center;
+                margin-top: 50px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+        </style>
     </head>
     <body>
-        <h1>让我看看是哪个小可爱呀</h1>
-        
-        <!-- 音频播放器 -->
-        <audio id="audioPlayer" controls>
-            <source src="./forwsj/明天见，就是我会去找你.mp3" type="audio/mpeg">
-            您的浏览器不支持音频播放。
-        </audio>
+        <div class="container">
+            <h1>让我看看是哪个小可爱呀</h1>
+            
+            <!-- 音频播放器 -->
+            <audio id="audioPlayer" controls>
+                <source src="./forwsj/明天见，就是我会去找你.mp3" type="audio/mpeg">
+                您的浏览器不支持音频播放。
+            </audio>
 
-        <br><br>
+            <br><br>
 
-        <!-- 显示图片 -->
-        <img id="imageDisplay" src="./forwsj/2024_1_4.jpg" alt="2024_1_4" style="max-width: 500px;">
+            <!-- 显示图片 -->
+            <img id="imageDisplay" src="./forwsj/2024_1_4.jpg" alt="2024_1_4">
+        </div>
 
         <script>
             // 检查音频是否加载成功

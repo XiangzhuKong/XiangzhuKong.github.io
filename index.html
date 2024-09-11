@@ -3,6 +3,35 @@
         <title>WSJ and KXZ 的小屋</title>
     </head>
     <body>
-        让我看看是哪个小可爱呀
+        <h1>让我看看是哪个小可爱呀</h1>
+        
+        <!-- 音频播放器 -->
+        <audio id="audioPlayer" controls>
+            <source src="./forwsj/明天见，就是我会去找你.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+
+        <br><br>
+
+        <!-- 显示图片 -->
+        <img id="imageDisplay" src="./forwsj/2024_1_4.jpg" alt="2024_1_4" style="max-width: 500px;">
+
+        <script>
+            // 检查音频是否加载成功
+            document.addEventListener("DOMContentLoaded", function() {
+                const audioPlayer = document.getElementById("audioPlayer");
+                
+                audioPlayer.onerror = function() {
+                    alert("音频文件未找到！");
+                };
+
+                const imageDisplay = document.getElementById("imageDisplay");
+
+                // 检查图片是否加载成功
+                imageDisplay.onerror = function() {
+                    alert("图片未找到！");
+                };
+            });
+        </script>
     </body>
 </html>
